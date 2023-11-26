@@ -12,5 +12,10 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 - [ ] table components
 - [ ] database connection (Prisma?)
-- [ ] form generation using models (schemas)
-  - [ ] use react-hook-form
+- [x] form generation using models (schemas)
+  - [x] use react-hook-form
+  - [ ] error handling
+  - [ ] date field type
+  - [ ] boolean/toggle field type and input component
+  - [ ] picker/dropdown field type and input component
+  - [ ] password validation built in
