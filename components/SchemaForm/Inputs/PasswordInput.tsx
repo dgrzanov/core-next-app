@@ -29,6 +29,10 @@ const PasswordInput: FC<PasswordInputProps> = (props) => {
           dbName,
           validation && {
             ...validation,
+            // at least one lowercase letter,
+            //          one uppercase letter,
+            //          one special character,
+            //          one number
             pattern: /^(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z])/,
           }
         )}

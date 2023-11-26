@@ -10,12 +10,16 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## TODO
 
+- [ ] app header refactor
+- [ ] app footer
 - [ ] table components
 - [ ] database connection (Prisma?)
 - [x] form generation using models (schemas)
   - [x] use react-hook-form
-  - [ ] error handling
+  - [x] error handling
   - [ ] date field type
   - [ ] boolean/toggle field type and input component
   - [ ] picker/dropdown field type and input component
-  - [ ] password validation built in
+  - [x] password validation built in
+- [ ] app theme with global variables
+  - [ ] research how it's done in Tailwind
