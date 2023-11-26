@@ -1,11 +1,15 @@
 "use client";
-import { Schema } from "@/@types/Schema";
 import React, { FC } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
+
+// Custom components
 import TextInput from "./Inputs/TextInput";
 import PasswordInput from "./Inputs/PasswordInput";
+import BooleanInput from "./Inputs/BooleanInput";
 
 // Types
+import { Schema } from "@/@types/Schema";
+
 type SchemaFormProps = {
   schema: Schema;
 };
@@ -47,6 +51,18 @@ const SchemaForm: FC<SchemaFormProps> = (props) => {
           case "password": {
             return (
               <PasswordInput
+                key={`${field.db_name}-input`}
+                register={register}
+                label={field.name}
+                dbName={field.db_name}
+                validation={field.validation}
+                error={errors[field.db_name]}
+              />
+            );
+          }
+          case "boolean": {
+            return (
+              <BooleanInput
                 key={`${field.db_name}-input`}
                 register={register}
                 label={field.name}

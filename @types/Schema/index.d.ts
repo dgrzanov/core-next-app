@@ -7,7 +7,7 @@ export type Schema = {
 type Field = {
   name: string;
   db_name: string;
-  type: "text" | "number" | "date" | "password";
+  type: "text" | "number" | "date" | "password" | "boolean";
   validation?: FieldValidation;
 };
 

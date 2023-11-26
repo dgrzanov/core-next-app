@@ -21,6 +21,11 @@ const User: Schema = {
         minLength: 8,
       },
     },
+    {
+      name: "Admin",
+      db_name: "is_admin",
+      type: "boolean",
+    },
   ],
 };
 
