@@ -1,9 +1,12 @@
 import React, { FC } from "react";
 import { UseFormRegister } from "react-hook-form";
-import { Record } from "@/components/SchemaForm/SchemaForm";
+
+// Custom components
+import ErrorMessage from "../ErrorMessage";
 
 // Types
 import { FieldValidation } from "@/@types/Schema";
+import { Record } from "@/components/SchemaForm/SchemaForm";
 
 type PasswordInputProps = {
   register: UseFormRegister<Record>;
@@ -22,11 +25,15 @@ const PasswordInput: FC<PasswordInputProps> = (props) => {
       <input
         type="password"
         className="bg-slate-600"
-        {...register(dbName, validation && { ...validation })}
+        {...register(
+          dbName,
+          validation && {
+            ...validation,
+            pattern: /^(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z])/,
+          }
+        )}
       />
-      {error && (
-        <span className="text-red-600">There has been an error :(</span>
-      )}
+      {error && <ErrorMessage error={error} validation={validation} />}
     </div>
   );
 };

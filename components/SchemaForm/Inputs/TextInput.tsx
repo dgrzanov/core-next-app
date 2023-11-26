@@ -1,6 +1,9 @@
 import React, { FC } from "react";
 import { UseFormRegister } from "react-hook-form";
+
+// Custom components
 import { Record } from "@/components/SchemaForm/SchemaForm";
+import ErrorMessage from "../ErrorMessage";
 
 // Types
 import { FieldValidation } from "@/@types/Schema";
@@ -29,9 +32,7 @@ const TextInput: FC<TextInputProps> = (props) => {
           }
         )}
       />
-      {error && (
-        <span className="text-red-600">There has been an error :(</span>
-      )}
+      {error && <ErrorMessage error={error} validation={validation} />}
     </div>
   );
 };
