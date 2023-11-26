@@ -1,14 +1,14 @@
 export type Schema = {
   name: string;
   apiPath: string;
-  fields: [
-    {
-      name: string;
-      db_name: string;
-      type: string;
-      validation?: FieldValidation;
-    }
-  ];
+  fields: Field[];
+};
+
+type Field = {
+  name: string;
+  db_name: string;
+  type: "text" | "number" | "date" | "password";
+  validation?: FieldValidation;
 };
 
 export type FieldValidation = BasicValidation &
@@ -20,14 +20,14 @@ export type BasicValidation = {
 };
 
 export type TextValidation = {
-  minLength?: Number;
-  maxLength?: Number;
-  pattern?: RegExp;
+  minLength?: number;
+  maxLength?: number;
+  pattern?: string;
 };
 
 export type NumberValidation = {
-  min?: Number;
-  max?: Number;
+  min?: number;
+  max?: number;
 };
 
 export type DateValidation = {};
