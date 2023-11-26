@@ -22,7 +22,7 @@ export type BasicValidation = {
 export type TextValidation = {
   minLength?: number;
   maxLength?: number;
-  pattern?: string;
+  pattern?: RegExp;
 };
 
 export type NumberValidation = {

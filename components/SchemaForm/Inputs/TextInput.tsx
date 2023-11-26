@@ -22,7 +22,12 @@ const TextInput: FC<TextInputProps> = (props) => {
       <input
         type="text"
         className="bg-slate-600"
-        {...(register(dbName), validation && { ...validation })}
+        {...register(
+          dbName,
+          validation && {
+            ...validation,
+          }
+        )}
       />
       {error && (
         <span className="text-red-600">There has been an error :(</span>

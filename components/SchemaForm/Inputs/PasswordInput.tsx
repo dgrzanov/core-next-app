@@ -22,7 +22,7 @@ const PasswordInput: FC<PasswordInputProps> = (props) => {
       <input
         type="password"
         className="bg-slate-600"
-        {...(register(dbName), validation && { ...validation })}
+        {...register(dbName, validation && { ...validation })}
       />
       {error && (
         <span className="text-red-600">There has been an error :(</span>
