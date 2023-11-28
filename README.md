@@ -19,7 +19,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
   - [x] error handling
   - [ ] date field type
   - [x] boolean/toggle field type and input component
-  - [ ] picker/dropdown field type and input component
+  - [x] picker/dropdown field type and input component
   - [x] password validation built in
+  - [ ] schema property for form field selection
 - [ ] app theme with global variables
   - [ ] research how it's done in Tailwind

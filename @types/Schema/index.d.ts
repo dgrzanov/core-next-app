@@ -7,7 +7,8 @@ export type Schema = {
 type Field = {
   name: string;
   db_name: string;
-  type: "text" | "number" | "date" | "password" | "boolean";
+  type: "text" | "number" | "date" | "password" | "boolean" | "picker";
+	options?: PickerOptions;
   validation?: FieldValidation;
 };
 
@@ -31,3 +32,8 @@ export type NumberValidation = {
 };
 
 export type DateValidation = {};
+
+export PickerOptions = {
+	labels: string[];
+	values: number[] | string[];
+}

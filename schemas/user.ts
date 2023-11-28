@@ -26,6 +26,15 @@ const User: Schema = {
       db_name: "is_admin",
       type: "boolean",
     },
+		{
+			name: "Gender",
+			db_name: "gender",
+			type: "picker",
+			options: {
+				labels: ["Male", "Female"],
+				values: ["M", "F"],
+			}
+		}
   ],
 };
 
