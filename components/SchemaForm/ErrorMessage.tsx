@@ -23,9 +23,11 @@ const ErrorMessage: FC<ErrorMesageProps> = (props) => {
         setMessage("Input does not match the required pattern");
         break;
       case "minLength":
+        // @ts-ignore
         setMessage(`Minimal length of input is ${validation?.minLength}`);
         break;
       case "maxLength":
+        // @ts-ignore
         setMessage(`Maximum length of input is ${validation?.maxLength}`);
         break;
       default:

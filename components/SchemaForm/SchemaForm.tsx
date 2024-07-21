@@ -7,6 +7,7 @@ import TextInput from "./Inputs/TextInput";
 import PasswordInput from "./Inputs/PasswordInput";
 import BooleanInput from "./Inputs/BooleanInput";
 import PickerInput from "./Inputs/PickerInput";
+import DateInput from "./Inputs/DateInput";
 
 // Types
 import { Schema } from "@/@types/Schema";
@@ -26,6 +27,7 @@ const SchemaForm: FC<SchemaFormProps> = (props) => {
     register,
     handleSubmit,
     watch,
+    setValue,
     formState: { errors },
   } = useForm<Record>();
 
@@ -80,7 +82,20 @@ const SchemaForm: FC<SchemaFormProps> = (props) => {
                 register={register}
                 label={field.name}
                 dbName={field.db_name}
-								options={field.options}
+                options={field.options}
+                validation={field.validation}
+                error={errors[field.db_name]}
+              />
+            );
+          }
+          case "date": {
+            return (
+              <DateInput
+                key={`${field.db_name}-input`}
+                register={register}
+                setValue={setValue}
+                label={field.name}
+                dbName={field.db_name}
                 validation={field.validation}
                 error={errors[field.db_name]}
               />

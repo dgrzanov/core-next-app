@@ -13,7 +13,7 @@ type PickerInputProps = {
   label: string;
   dbName: string;
   error: any;
-	options: PickerOptions;
+  options: PickerOptions;
   validation?: FieldValidation;
 };
 
@@ -25,18 +25,22 @@ const PickerInput: FC<PickerInputProps> = (props) => {
       <label className="w-20">{label}</label>
       <select
         className="select rounded-none bg-slate-600"
+        defaultValue={"default"}
         {...register(
           dbName,
           validation && {
             ...validation,
           }
         )}
-			>
-				<option disabled selected>Pick gender</option>
-				{options.values.map((val, i) => (
-					<option value={val}>{options.labels[i]}</option>
-					)
-				)}
+      >
+        <option disabled value="default">
+          Pick gender
+        </option>
+        {options.values.map((val, i) => (
+          <option key={`picker-${val}`} value={val}>
+            {options.labels[i]}
+          </option>
+        ))}
       </select>
       {error && <ErrorMessage error={error} validation={validation} />}
     </div>
@@ -44,5 +48,3 @@ const PickerInput: FC<PickerInputProps> = (props) => {
 };
 
 export default PickerInput;
-
-

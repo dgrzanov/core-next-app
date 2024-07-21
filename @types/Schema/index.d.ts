@@ -4,12 +4,50 @@ export type Schema = {
   fields: Field[];
 };
 
-type Field = {
+type BasicField = {
   name: string;
   db_name: string;
-  type: "text" | "number" | "date" | "password" | "boolean" | "picker";
-	options?: PickerOptions;
-  validation?: FieldValidation;
+};
+
+type Field = BasicField &
+  (
+    | TextField
+    | NumberField
+    | DateField
+    | PasswordField
+    | BooleanField
+    | PickerField
+  );
+
+type TextField = {
+  type: "text";
+  validation?: BasicValidation & TextValidation;
+};
+
+type NumberField = {
+  type: "number";
+  validation?: BasicValidation & NumberValidation;
+};
+
+type DateField = {
+  type: "date";
+  validation?: BasicValidation & DateValidation;
+};
+
+type PasswordField = {
+  type: "password";
+  validation?: BasicValidation & TextValidation;
+};
+
+type BooleanField = {
+  type: "boolean";
+  validation?: BasicValidation;
+};
+
+type PickerField = {
+  type: "picker";
+  options: PickerOptions;
+  validation?: BasicValidation;
 };
 
 export type FieldValidation = BasicValidation &
@@ -33,7 +71,7 @@ export type NumberValidation = {
 
 export type DateValidation = {};
 
-export PickerOptions = {
-	labels: string[];
-	values: number[] | string[];
-}
+export type PickerOptions = {
+  labels: string[];
+  values: number[] | string[];
+};

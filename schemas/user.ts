@@ -34,7 +34,12 @@ const User: Schema = {
 				labels: ["Male", "Female"],
 				values: ["M", "F"],
 			}
-		}
+		},
+		{
+			name: "Date of birth",
+			db_name: "dob",
+			type: "date",
+		},
   ],
 };
 
