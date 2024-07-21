@@ -25,4 +25,5 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
   - [ ] schema property for form field selection
 - [x] app theme with global variables
   - [x] research how it's done in Tailwind
-- [ ] dark/light theme button
+- [x] dark/light theme button
+- [ ] tests
