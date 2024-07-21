@@ -8,6 +8,7 @@ import PasswordInput from "./Inputs/PasswordInput";
 import BooleanInput from "./Inputs/BooleanInput";
 import PickerInput from "./Inputs/PickerInput";
 import DateInput from "./Inputs/DateInput";
+import { Button } from "@/components/ui/button";
 
 // Types
 import { Schema } from "@/@types/Schema";
@@ -103,9 +104,9 @@ const SchemaForm: FC<SchemaFormProps> = (props) => {
           }
         }
       })}
-      <button type="submit" className="border hover:bg-slate-500">
+      <Button type="submit" className="w-40">
         Login
-      </button>
+      </Button>
     </form>
   );
 };

@@ -31,11 +31,26 @@
     --chart-5: 255 255 255;
   }
 
-  .dark {
+  .light {
     --background: 255 255 255;
     --foreground: 0 0 0;
     --card: 200 200 200;
     --card-foreground: 50 50 50;
+    --popover: 200 200 200;
+    --popover-foreground: 50 50 50;
+
+    --primary: 0 0 0;
+    --primary-foreground: 255 255 255;
+    --secondary: 50 50 50;
+    --secondary-foreground: 200 200 200;
+    --muted: 150 150 150;
+    --muted-foreground: 100 100 100;
+    --accent-foreground: 200 200 200;
+    --accent: 50 50 50;
+    --destructive: 0 0 0;
+    --destructive-foreground: 255 255 255;
+
+    --input: 200 200 200;
   }
 }
 

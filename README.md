@@ -21,7 +21,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
   - [x] boolean/toggle field type and input component
   - [x] picker/dropdown field type and input component
   - [x] password validation built in
-  - [ ] checkbox component from shadcn
+  - [x] checkbox component from shadcn
   - [ ] schema property for form field selection
 - [x] app theme with global variables
   - [x] research how it's done in Tailwind

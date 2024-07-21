@@ -1,3 +1,4 @@
+"use client";
 import React, { FC } from "react";
 import { UseFormRegister } from "react-hook-form";
 
