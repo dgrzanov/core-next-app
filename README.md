@@ -17,10 +17,12 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - [x] form generation using models (schemas)
   - [x] use react-hook-form
   - [x] error handling
-  - [ ] date field type
+  - [x] date field type
   - [x] boolean/toggle field type and input component
   - [x] picker/dropdown field type and input component
   - [x] password validation built in
+  - [ ] checkbox component from shadcn
   - [ ] schema property for form field selection
-- [ ] app theme with global variables
-  - [ ] research how it's done in Tailwind
+- [x] app theme with global variables
+  - [x] research how it's done in Tailwind
+- [ ] dark/light theme button

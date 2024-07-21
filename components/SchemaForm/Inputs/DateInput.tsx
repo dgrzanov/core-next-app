@@ -73,14 +73,17 @@ const DateInput: FC<DateInputProps> = (props) => {
         <PopoverTrigger asChild>
           <input
             style={{ fontSize: "inherit" }}
-            className="bg-slate-600"
+            className="bg-input text-foreground rounded-md p-1 focus:ring focus:ring-ring focus:outline-none"
             type="text"
             value={inputValue}
             placeholder="dd.MM.yyyy"
             onChange={handleInputChange}
           />
         </PopoverTrigger>
-        <PopoverContent className="w-auto p-0 bg-slate-600" align="start">
+        <PopoverContent
+          className="w-auto bg-input text-foreground rounded-md p-1 focus:ring focus:ring-ring focus:outline-none"
+          align="start"
+        >
           <Calendar
             month={month}
             onMonthChange={setMonth}

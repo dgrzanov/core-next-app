@@ -5,7 +5,7 @@ import NavBar from "../components/NavBar";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between bg-slate-700">
+    <main className="flex min-h-screen flex-col items-center justify-between">
       <NavBar />
       <AppPage>
         <p className="text-2xl">Demo page</p>

@@ -24,7 +24,7 @@ const TextInput: FC<TextInputProps> = (props) => {
       <label className="w-20">{label}</label>
       <input
         type="text"
-        className="bg-slate-600"
+        className="bg-input text-foreground rounded-md p-1 focus:ring focus:ring-ring focus:outline-none"
         {...register(
           dbName,
           validation && {

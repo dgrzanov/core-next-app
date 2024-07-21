@@ -24,7 +24,7 @@ const TextInput: FC<TextInputProps> = (props) => {
       <label className="w-20">{label}</label>
       <input
         type="checkbox"
-        className="bg-slate-600 toggle"
+        className="toggle"
         {...register(
           dbName,
           validation && {

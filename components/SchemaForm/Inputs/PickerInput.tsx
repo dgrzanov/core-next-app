@@ -24,8 +24,9 @@ const PickerInput: FC<PickerInputProps> = (props) => {
     <div className="flex justify-start gap-3">
       <label className="w-20">{label}</label>
       <select
-        className="select rounded-none bg-slate-600"
+        className="select bg-input text-foreground rounded-md p-1 focus:ring focus:ring-ring focus:outline-none"
         defaultValue={"default"}
+        placeholder="Pick gender2"
         {...register(
           dbName,
           validation && {
@@ -33,9 +34,7 @@ const PickerInput: FC<PickerInputProps> = (props) => {
           }
         )}
       >
-        <option disabled value="default">
-          Pick gender
-        </option>
+        <option disabled value="default"></option>
         {options.values.map((val, i) => (
           <option key={`picker-${val}`} value={val}>
             {options.labels[i]}
