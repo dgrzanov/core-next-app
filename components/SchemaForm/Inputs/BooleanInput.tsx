@@ -4,6 +4,7 @@ import { UseFormRegister } from "react-hook-form";
 // Custom components
 import { Record } from "@/components/SchemaForm/SchemaForm";
 import ErrorMessage from "../ErrorMessage";
+import { Checkbox } from "@/components/ui/checkbox";
 
 // Types
 import { FieldValidation } from "@/@types/Schema";
@@ -21,10 +22,12 @@ const TextInput: FC<TextInputProps> = (props) => {
 
   return (
     <div className="flex justify-start gap-3">
-      <label className="w-20">{label}</label>
-      <input
-        type="checkbox"
-        className="toggle"
+      <label className="w-20" htmlFor={dbName}>
+        {label}
+      </label>
+      <Checkbox
+        id={dbName}
+        className="self-center"
         {...register(
           dbName,
           validation && {
