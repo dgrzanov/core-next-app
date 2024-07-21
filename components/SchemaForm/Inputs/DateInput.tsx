@@ -1,9 +1,11 @@
 import React, { useState, FC } from "react";
-import { FieldErrors, UseFormRegister, UseFormSetValue } from "react-hook-form";
+import { UseFormRegister, UseFormSetValue } from "react-hook-form";
+import { format, isValid, parse } from "date-fns";
 
 // Custom components
 import { Record } from "@/components/SchemaForm/SchemaForm";
 import ErrorMessage from "../ErrorMessage";
+import { Calendar } from "@/components/ui/calendar";
 
 // Types
 import { FieldValidation } from "@/@types/Schema";
@@ -12,8 +14,6 @@ import {
   PopoverTrigger,
   PopoverContent,
 } from "@radix-ui/react-popover";
-import { format, isValid, parse } from "date-fns";
-import { Calendar } from "@/components/ui/calendar";
 
 type DateInputProps = {
   register: UseFormRegister<Record>;

@@ -3,10 +3,10 @@ import { UseFormRegister } from "react-hook-form";
 
 // Custom components
 import ErrorMessage from "../ErrorMessage";
+import { Record } from "@/components/SchemaForm/SchemaForm";
 
 // Types
 import { FieldValidation } from "@/@types/Schema";
-import { Record } from "@/components/SchemaForm/SchemaForm";
 
 type PasswordInputProps = {
   register: UseFormRegister<Record>;
