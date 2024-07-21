@@ -20,7 +20,7 @@ type DateInputProps = {
   setValue: UseFormSetValue<Record>;
   label: string;
   dbName: string;
-  error?: FieldErrors<Record>;
+  error?: any;
   validation?: FieldValidation;
 };
 
